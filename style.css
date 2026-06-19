@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfd;
+    color: #111827;
+    line-height: 1.5;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fcfcfd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.logo-box{
+    width: 35px;
+    height: 35px;
+    background-color: #6a4bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    gap: 1px;
+}
+
+.reverse-l{
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.logo-text{
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+
+.logo-text span{
+    color: #6a4bff;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.on{
+    color: #6a4bff;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary{
+    background-color: #6a4bff;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: #5231e6;
+}
+
+.btn-large{
+    padding: 0.875rem 2rem;
+    box-shadow: 0 4px 14px rgba(106, 75, 255, 0.3);
+}
+
+.hero{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 4rem; 
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.hero-content{
+    flex: 1;
+}
+
+.badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f3f0ff;
+    color: #6a4bff;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.hero h1 span{
+    color: #6a4bff;
+}
+
+.hero-description{
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.features-list{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.feature-item{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon-box{
+    width: 40px;
+    height: 40px;
+    background-color: #f3f0ff;
+    color: #6a4bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-item span{
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-actions{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link-action{
+    color: #6a4bff;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link-action:hover{
+    text-decoration: underline;
+}
+
+.hero-visual{
+    flex: 1;
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-dashed-circle{
+    position: absolute;
+    width: 520px; 
+    height: 520px;
+    z-index: 0;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='50%25' cy='50%25' r='49%25' fill='none' stroke='%23333' stroke-width='1' stroke-dasharray='8 16' stroke-linecap='round'/%3e%3c/svg%3e");
+    opacity: 0.4;
+}
+
+.bg-shape-solid{
+    position: absolute;
+    width: 360px;
+    height: 480px;
+    background-color: #7b5cfb; /* Vibrant purple from image */
+    z-index: 1;
+    border-radius: 20px 140px 20px 20px; 
+}
+
+.main-image {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(-60px); 
+}
+
+.widget{
+    position: absolute;
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-header-inline{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.widget-icon-small{
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.icon-blue{ 
+    background-color: #e0e7ff; 
+    color: #4f46e5; 
+}
+
+.icon-purple{ 
+    background-color: #f3f0ff; 
+    color: #6a4bff; 
+}
+
+
+.widget-title{ 
+    font-size: 0.8rem; 
+    color: #6b7280; 
+    font-weight: 500; 
+}
+
+.widget-value{ 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: #111; 
+    line-height: 1.2; 
+    margin-bottom: 0.2rem; 
+}
+
+.widget-stat{ 
+    font-size: 0.8rem; 
+    font-weight: 600; 
+}
+
+.widget-stat.positive{ 
+    color: #22c55e; 
+}
+
+.text-center{ 
+    text-align: center; 
+}
+
+.widget-revenue{ 
+    top: 12%; 
+    left: -5%; 
+}
+
+.widget-customers{ 
+    bottom: 20%; 
+    left: -8%; 
+}
+
+.widget-chart{ 
+    top: 25%; 
+    right: -8%; 
+    padding: 1.25rem; 
+    width: 170px; 
+}
+
+.widget-growth{ 
+    bottom: 10%;
+    right: 5%; 
+    align-items: center; 
+    gap: 0.75rem; 
+}
+
+
+.graph-container {
+    margin: 0.75rem 0;
+}
+
+.graph-svg{
+    width: 100%;
+    height: 40px;
+    overflow: visible;
+}
+
+.data-line{
+    fill: none;
+    stroke: #6a4bff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.widget-divider{
+    border: none;
+    border-top: 1px solid #f3f4f6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-text{
+    font-size: 0.75rem;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.circle-prog{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: conic-gradient(#6a4bff 75%, #e6e0ff 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-prog-inner{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111;
+}
+
+
